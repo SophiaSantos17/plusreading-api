@@ -18,6 +18,7 @@ app.use(cors());
 app.use(json());
 
 // Rotas
+app.use('/uploads', express.static('src/uploads'));
 app.use(authRouter);
 app.use(bookRouter);
 

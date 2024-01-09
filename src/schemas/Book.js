@@ -14,7 +14,7 @@ const BooksSchema = new Schema({
     personagensFavoritos: {type: String, required: true},
     adaptacao: {type: String, required: true},
     opiniaoUser: {type: String, required: true},
-    // imgBook: {type: String, required: true},
+    bookImage: {type: String, required: true},
     userId: {type: Schema.Types.ObjectId, required: true, ref: "users"},
     cratedAt: {type: Date, default: Date.now()}
 });

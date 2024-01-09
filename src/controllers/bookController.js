@@ -3,9 +3,10 @@ import bookServices from "../services/bookServices.js";
 async function create(req, res){
     const body = req.body;
     const {_id: id} = res.locals.user;
+    const file = req.file;
 
     try{
-        const book = await bookServices.create(body, id);
+        const book = await bookServices.create(body, id, file);
         return res.status(201).send(book);
     }catch(err){
         res.status(409).send(err.message);
