@@ -5,7 +5,7 @@ import { authMiddleware } from "../middlewares/authMiddleware.js";
 const authRouter = Router();
 
 authRouter.post("/signup", authController.signup);
-authRouter.get("/signin", authController.signin);
+authRouter.post("/signin", authController.signin);
 authRouter.get("/me", authMiddleware, authController.userLogged)
 
 export default authRouter;
